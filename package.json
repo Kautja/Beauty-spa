@@ -50,7 +50,6 @@
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.544.0",
     "mongo-sanitize": "^1.1.0",
-    "mongoose": "^8.18.1",
     "motion": "^12.23.15",
     "next": "15.5.3",
     "next-themes": "^0.4.6",

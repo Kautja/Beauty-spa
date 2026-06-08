@@ -24,7 +24,7 @@ function HeroSection() {
             Timeless Elegance
           </h1>
           <p className="text-md sm:text-lg md:text-xl leading-relaxed text-[#fff9]">
-            Experience Botswana's premier luxury wellness sanctuary. Transformative spa therapies, bespoke beauty treatments, and absolute serenity.
+            Experience Botswana&apos;s premier luxury wellness sanctuary. Transformative spa therapies, bespoke beauty treatments, and absolute serenity.
           </p>
         </div>
       </div>

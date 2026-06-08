@@ -7,15 +7,11 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 import OtherCoursesList from '@/components/OtherCoursesList';
 
+import { courses } from '@/contant/courses';
+
 async function getCourse(id: string) {
-  // Build absolute URL for SSR
-  const base = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-  const res = await fetch(`${base}/api/courses/${id}`, {
-    cache: 'no-store',
-    headers: { Cookie: cookies().toString() },
-  });
-  if (!res.ok) return null;
-  return await res.json();
+  const course = courses.find((c) => c._id === id);
+  return course || null;
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
@@ -79,7 +75,7 @@ export default async function CoursePage({ params }: { params: { id: string } })
       <div className="flex flex-wrap gap-4 justify-center mb-2">
         <span className="bg-accent px-2 py-1 rounded text-sm">{course.level}</span>
         <span className="text-muted-foreground text-sm">{course.duration}</span>
-        <span className="text-primary font-semibold text-base">{typeof course.price === 'number' ? `$${course.price}` : course.price}</span>
+        <span className="text-primary font-semibold text-base">{typeof course.price === 'number' ? `P${course.price}` : course.price}</span>
       </div>
       <p className="text-lg text-muted-foreground mb-2 text-center">{course.description}</p>
       <div className="w-full flex justify-center mb-2">

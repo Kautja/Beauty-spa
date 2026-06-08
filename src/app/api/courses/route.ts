@@ -1,20 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import dbConnect from "@/lib/mongodb";
-import Course from "@/models/Course";
+import { courses } from "@/contant/courses";
 
 export const runtime = "nodejs";
 
 export async function GET(req: NextRequest) {
-	await dbConnect();
 	const { searchParams } = new URL(req.url);
 	const limitParam = searchParams.get("limit");
-	let query = Course.find({ status: "active" }).sort({ createdAt: -1 });
+	let data = courses.filter((c) => c.status === "active");
 	if (limitParam) {
 		const limit = parseInt(limitParam, 10);
 		if (!isNaN(limit) && limit > 0) {
-			query = query.limit(limit);
+			data = data.slice(0, limit);
 		}
 	}
-	const courses = await query;
-	return NextResponse.json(courses);
+	return NextResponse.json(data);
 }

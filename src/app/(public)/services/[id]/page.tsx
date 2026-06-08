@@ -4,14 +4,11 @@ import BookingForm from './BookingForm';
 import Link from 'next/link';
 import OtherServicesList from '@/components/OtherServicesList';
 
+import { services } from '@/contant/services';
+
 async function getService(id: string) {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
-  const res = await fetch(`${base}/api/services/${id}`, {
-    cache: 'no-store',
-    headers: { Cookie: cookies().toString() },
-  });
-  if (!res.ok) return null;
-  return await res.json();
+  const service = services.find((s) => s._id === id);
+  return service || null;
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {

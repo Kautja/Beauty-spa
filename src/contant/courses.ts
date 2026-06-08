@@ -1,44 +1,92 @@
 export const courses = [
-    {
-      name: "Professional Makeup Artistry",
-      duration: "12 weeks",
-      price: "$1,299",
-      level: "Beginner to Advanced",
-      description: "Master the art of professional makeup application, from basic techniques to advanced editorial looks."
-    },
-    {
-      name: "Nail Art & Design Mastery",
-      duration: "8 weeks",
-      price: "$899",
-      level: "All Levels",
-      description: "Learn professional nail art techniques, gel application, and creative design concepts."
-    },
-    {
-      name: "Eyelash Extension Certification",
-      duration: "6 weeks",
-      price: "$799",
-      level: "Beginner",
-      description: "Get certified in professional eyelash extension application with hands-on training."
-    },
-    {
-      name: "Advanced Pedicure Techniques",
-      duration: "4 weeks",
-      price: "$599",
-      level: "Intermediate",
-      description: "Master advanced pedicure techniques and foot care treatments for professionals."
-    },
-    {
-      name: "Bridal Makeup Specialist",
-      duration: "10 weeks",
-      price: "$1,099",
-      level: "Intermediate",
-      description: "Specialize in bridal makeup artistry with portfolio development and client management."
-    },
-    {
-      name: "Nail Health & Repair",
-      duration: "6 weeks",
-      price: "$699",
-      level: "All Levels",
-      description: "Learn nail health assessment, repair techniques, and treatment protocols."
-    }
-  ];
+  {
+    _id: "course_1",
+    title: "Professional Makeup Artistry",
+    name: "Professional Makeup Artistry",
+    duration: "12 weeks",
+    price: 1299,
+    level: "Beginner",
+    category: "Makeup",
+    description: "Master the art of professional makeup application, from basic techniques to advanced editorial looks.",
+    content: "This comprehensive 12-week course is designed to take you from a beginner to a confident, professional makeup artist. You will learn skin analysis, color theory, foundation matching, contouring, eye makeup techniques (including smokey eyes and cut creases), bridal makeup, and editorial looks. The course includes hands-on practice, a professional brush set, and a final portfolio photoshoot.",
+    image: "/images/unsplash/service3.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  },
+  {
+    _id: "course_2",
+    title: "Nail Art & Design Mastery",
+    name: "Nail Art & Design Mastery",
+    duration: "8 weeks",
+    price: 899,
+    level: "Intermediate",
+    category: "Nails",
+    description: "Learn professional nail art techniques, gel application, and creative design concepts.",
+    content: "Elevate your nail services with our Nail Art & Design Mastery course. Over 8 weeks, you will dive deep into advanced gel techniques, acrylic sculpting, 3D nail art, hand-painted designs, and proper tool maintenance. Perfect for those who already have basic manicure knowledge and want to specialize in creative, high-end nail designs.",
+    image: "/images/unsplash/service4.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  },
+  {
+    _id: "course_3",
+    title: "Eyelash Extension Certification",
+    name: "Eyelash Extension Certification",
+    duration: "6 weeks",
+    price: 799,
+    level: "Beginner",
+    category: "Lashes",
+    description: "Get certified in professional eyelash extension application with hands-on training.",
+    content: "Become a certified lash technician in just 6 weeks. This course covers the anatomy of the eye, health and safety standards, isolation techniques, and the application of classic, hybrid, and volume lash extensions. You will practice on mannequins before moving to live models under close supervision.",
+    image: "/images/unsplash/service5.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  },
+  {
+    _id: "course_4",
+    title: "Advanced Pedicure Techniques",
+    name: "Advanced Pedicure Techniques",
+    duration: "4 weeks",
+    price: 599,
+    level: "Advanced",
+    category: "Nails",
+    description: "Master advanced pedicure techniques and foot care treatments for professionals.",
+    content: "Take your foot care services to the next level. This 4-week advanced course focuses on treating specific foot conditions (like severe calluses and ingrown nails safely), performing medical-grade pedicures, and mastering deep tissue foot massage techniques to provide a truly luxurious experience for your clients.",
+    image: "/images/unsplash/service7.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  },
+  {
+    _id: "course_5",
+    title: "Bridal Makeup Specialist",
+    name: "Bridal Makeup Specialist",
+    duration: "10 weeks",
+    price: 1099,
+    level: "Intermediate",
+    category: "Makeup",
+    description: "Specialize in bridal makeup artistry with portfolio development and client management.",
+    content: "The bridal industry is lucrative and demanding. This course teaches you how to create flawless, tear-resistant bridal looks that photograph beautifully and last all day. We also cover the business side: how to conduct trials, manage contracts, build a bridal kit, and market yourself to brides-to-be.",
+    image: "/images/unsplash/service8.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  },
+  {
+    _id: "course_6",
+    title: "Nail Health & Repair",
+    name: "Nail Health & Repair",
+    duration: "6 weeks",
+    price: 699,
+    level: "Intermediate",
+    category: "Nails",
+    description: "Learn nail health assessment, repair techniques, and treatment protocols.",
+    content: "Understanding nail health is crucial for any professional. Learn to identify common nail diseases and disorders, perform safe removals of enhancements without damage, and apply advanced repair techniques like silk wraps and structured gel overlays to strengthen weak, brittle nails.",
+    image: "/images/unsplash/service6.jpg",
+    location: "physical",
+    status: "active",
+    createdAt: new Date().toISOString()
+  }
+];

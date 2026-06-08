@@ -68,7 +68,7 @@ function Services() {
                   <h3 className="text-xl font-medium text-foreground">{service.name}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
                   <div className="flex items-center justify-between pt-4">
-                    <span className="text-2xl font-light text-foreground">{typeof service.price === 'number' ? `$${service.price}` : service.price}</span>
+                    <span className="text-2xl font-light text-foreground">{typeof service.price === 'number' ? `P${service.price}` : service.price}</span>
                     <Link
                       href={`/services/${service._id}`}
                       scroll={false}

@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { verifyToken } from '@/lib/security';
-import dbConnect from '@/lib/mongodb';
-import User from '@/models/User';
 
 // Protect all /money-smile/art/home routes
 export async function middleware(req: NextRequest) {
@@ -17,11 +15,6 @@ export async function middleware(req: NextRequest) {
     if (!payload || typeof payload !== 'object' || !('id' in payload)) {
       return NextResponse.redirect(new URL('/money-smile/art/auth/login', req.url));
     }
-    await dbConnect();
-    const user = await User.findById(payload.id).select('role');
-    if (!user || user.role !== 'admin') {
-      return NextResponse.redirect(new URL('/money-smile/art/auth/login', req.url));
-    }
   }
   return NextResponse.next();
 }
@@ -29,3 +22,4 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: ['/money-smile/art/home/:path*'],
 };
+

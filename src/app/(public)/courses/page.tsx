@@ -80,7 +80,7 @@ const Courses = () => {
                   <h3 className="text-xl font-medium text-foreground">{course.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{course.description}</p>
                   <div className="flex items-center justify-between pt-4">
-                    <span className="text-2xl font-light text-foreground">{typeof course.price === 'number' ? `$${course.price}` : course.price}</span>
+                    <span className="text-2xl font-light text-foreground">{typeof course.price === 'number' ? `P${course.price}` : course.price}</span>
                     <Link 
                       href={`/courses/${course._id}`}
                       scroll={false}
