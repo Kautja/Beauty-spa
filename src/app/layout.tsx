@@ -1,5 +1,5 @@
 // app/layout.tsx or app/layout.js
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
@@ -13,7 +13,14 @@ const nunito = Nunito({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://auraspa.co.bw'),
   title: 'Aura Spa Botswana | Luxury Wellness, Massage & Beauty',
   description: 'Experience Botswana\'s premier luxury wellness sanctuary. Offering personalized massages, facials, body treatments, and premium nail care.',
   keywords: 'luxury spa botswana, massage gaborone, facials botswana, aura spa, premium beauty treatments, wellness retreat',
@@ -45,8 +52,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  themeColor: '#ffffff',
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
